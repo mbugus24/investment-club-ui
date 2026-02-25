@@ -179,9 +179,7 @@ body {
   font-weight: 800;
 }
 
-p .mb-1 {
-  color: var(--gold);
-}
+
 .promo-card p {
   margin: 0 0 8px;
   line-height: 1.2;
