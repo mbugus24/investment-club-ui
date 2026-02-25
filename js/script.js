@@ -1,25 +1,12 @@
-document.querySelectorAll(".membership-head").forEach((button) => {
-  button.addEventListener("click", () => {
-    const targetId = button.dataset.target;
+document.querySelectorAll('.membership-head').forEach((button) => {
+  button.addEventListener('click', () => {
+    const targetId = button.getAttribute('data-target');
     const target = document.getElementById(targetId);
 
     if (!target) return;
 
-    const isOpen = target.classList.contains("show");
-
-    //Close all open sections
-    document.querySelectorAll(".membership-body").forEach((body) => {
-      body.classList.remove("show");
-    });
-    document.querySelectorAll(".membership-head").forEach((btn) => {
-      btn.setAttribute('aria-expanded', 'false');
-    });
-
-    //Open the clicked section if it was closed
-    if (!isOpen) {
-      target.classList.add("show");
-      button.setAttribute('aria-expanded', 'true');
-    }
-    
+    const isVisible = target.classList.contains('show');
+    target.classList.toggle('show', !isVisible);
+    button.setAttribute('aria-expanded', String(!isVisible));
   });
 });
