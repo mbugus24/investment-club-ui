@@ -273,9 +273,8 @@ body {
   height: 12px;
   display: block;
 }
-.promo-card h3,
 .promo-card p:first-of-type {
-  color: #d4a017; /* gold */
+  color: #d4a017;
 }
 
 @media (max-width: 991.98px) {
